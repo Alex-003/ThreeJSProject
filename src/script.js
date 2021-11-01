@@ -12,15 +12,15 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
-// Objects
-const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
+// Objects (shape of something)
+const geometry = new THREE.SphereBufferGeometry(.5, 64, 64)
 
-// Materials
+// Materials (clothes)
 
-const material = new THREE.MeshBasicMaterial()
-material.color = new THREE.Color(0xff0000)
+const material = new THREE.MeshStandardMaterial()
+material.color = new THREE.Color(0x00ff00)
 
-// Mesh
+// Mesh (mixing objects and materials)
 const sphere = new THREE.Mesh(geometry,material)
 scene.add(sphere)
 
